@@ -1,0 +1,452 @@
+/* ================== Globals ================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+    /* colors  */
+    --blue-color: #42a5f5;
+    --blue-dark: #1a79c7;
+    --txt-dark: #22272b;
+    --txt-gray: #657481;
+    --txt-light: #e9ebec;
+    --txt-white: #fff;
+    --shadow-color: rgba(0, 0, 255, .2);
+    --gradient-color: linear-gradient(180deg, 
+        rgba(0, 0, 255, .02) 0%,
+        rgba(0, 0, 255, .1) 95%);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3{
+    color: var(--txt-dark);
+}
+p,span{
+    color: var(--txt-gray);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+   max-width: 100%;
+   height: auto;
+}
+
+/* ==== Reusable Classes ====== */
+.container{
+    max-width: 968px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* =================== Profile ================= */
+.profile{
+    position: relative;
+    padding-top: 3.5rem;
+    row-gap: 2rem;
+}
+
+.profile-data{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.profile-data .imgBx{
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    border: 3.5px solid var(--blue-color);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: .75rem;
+}
+
+.profile-data .imgBx img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profile-data .profession{
+    font-size: small;
+    font-weight: 500;
+    color: var(--txt-gray);
+    margin-bottom: 1rem;
+}
+
+.profile-data .socials{
+    display: flex;
+    justify-content: center;
+    column-gap: .75rem;
+}
+
+.profile-data .socials .link{
+    font-size: 1.25rem;
+    color: var(--txt-dark);
+    transition: .3s;
+}
+.profile-data .socials .link:hover{
+    color: var(--blue-color);
+}
+
+.profile-info{
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+    column-gap: 2.5rem;
+}
+
+.profile-info .group{
+    text-align: center;
+}
+
+.profile-info .group .number{
+    margin-bottom: .25rem;
+}
+
+.profile-info .group .desc{
+    font-size: small;
+    font-weight: 500;
+}
+
+.profile-btns, 
+.profile-btns .small-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-btns{
+    column-gap: 1rem;
+} 
+
+.profile-btns .small-btns{
+    column-gap: .25rem;
+}
+
+/* ========= Buttons ========= */
+.btn{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    background: var(--blue-color);
+    color: var(--txt-white);
+    padding: 1.15rem 1.5rem;
+    border-radius: .5rem;
+    transition: .3s;
+    box-shadow: 0 8px 24px var(--shadow-color);
+}
+.btn:hover{
+    background: var(--blue-dark);
+}
+
+.btn i{
+    font-size: 1.25rem;
+}
+
+.btn-small{
+    padding: .75rem;
+    box-shadow: none;
+}
+
+.btn-gray{
+    background: var(--txt-light);
+    color: var(--txt-dark);
+}
+.btn-gray:hover{
+    background: var(--txt-gray);
+    color: var(--txt-white);
+}
+
+/* =================== Filter =================== */
+.filter-tabs{
+    margin: 2rem 0 2.5rem;
+    background: var(--txt-light);
+    padding: .375rem;
+    border-radius: .75rem;
+    display: flex;
+    justify-content: space-between;
+    column-gap: .5rem;
+}
+
+.filter-btn{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    color: var(--txt-dark);
+    font-size: small;
+    font-weight: 500;
+    border-radius: .75rem;
+    background: transparent;
+}
+
+/* ========== Projects ============ */
+.projects-card{
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.projects-card img{
+    width: 100%;
+    height: 100%;
+}
+
+.projects-modal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem 1.25rem;
+    background: var(--gradient-color);
+    transition: .3s;
+}
+
+.projects-card:hover .projects-modal{
+    bottom: 0;
+}
+
+.projects-modal .subtitle,
+.projects-modal .title{
+    color: white;
+}
+
+.projects-modal .subtitle{
+    font-size: small;
+}
+
+.projects-modal .title{
+    font-size: medium;
+    margin-bottom: .75rem;
+}
+
+.projects-btn{
+    padding: .5rem;
+    color: white;
+}
+
+/* ========== Skills ============= */
+.skills{
+    row-gap: 3.5rem;
+}
+
+.skills-group{
+    display: grid;
+    justify-content: center;
+}
+
+.skills-group .title{
+    font-size: normal;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.skills-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    row-gap: 1rem;
+}
+
+.skill{
+    display: flex;
+    column-gap: .5rem;
+}
+
+.skill i{
+    font-size: 1rem;
+    color: var(--blue-color);
+}
+
+.skill .name{
+    font-size: medium;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.skill .level{
+    font-size: small;
+}
+
+/* ===== Show & Hide Filter Content ===== */
+.filter [data-content]{
+    display: none;
+}
+.filter .active[data-content]{
+    display: grid;
+}
+
+/* ================= Footer ================== */
+.footer-copy{
+    display: block;
+    margin: 2.5rem 0 2rem;
+    text-align: center;
+    font-size: smaller;
+}
+
+
+/* =================== Scrollbar ============== */
+::-webkit-scrollbar{
+    width: .6rem;
+    border-radius: .5rem;
+    background: var(--txt-light)
+}
+::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background: var(--txt-gray);
+}
+::-webkit-scrollbar-thumb:hover{
+    background: var(--txt-dark);
+}
+
+/* =================== Theme ==================== */
+#theme-btn{
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    font-size: 1.25rem;
+    color: var(--txt-dark);
+    cursor: pointer;
+    transition: .3s;
+}
+#theme-btn:hover{
+    color: var(--blue-color);
+}
+
+body.dark-theme{
+    /* colors  */
+    --blue-color: #42a5f5;
+    --blue-dark: #1a79c7;
+    --txt-dark: #fff;
+    --txt-gray: #e9ebec;
+    --txt-light: #657481;
+    --txt-white: #22272b;
+
+    background: var(--txt-white);
+    transition: .3s;  /* for animating dark mode */
+}
+
+
+/* ========================= Responsive ===================== */
+/* for small devices */
+@media screen and (max-width: 320px) {
+    .container{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .profile-info{
+        column-gap: 1.5rem;
+    }
+    .profile-btns{
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+    .skills-box{
+        column-gap: 1rem;
+    }
+}
+
+/* for Meduim devices */
+@media screen and (min-width: 576px) {
+    .projects{
+        grid-template-columns: 332px;
+        justify-content: center;
+    }
+
+    .filter-tabs{
+        width: 332px;
+        margin: 3rem auto;
+    }
+}
+
+@media screen and (min-width: 776px) {
+    .projects{
+        grid-template-columns: repeat(2, 332px);
+    }
+
+    .skills{
+        grid-template-columns: repeat(2, 332px);
+        justify-content: center;
+        column-gap: 3rem;
+    } 
+}
+
+/* for Large devices */
+@media screen and (min-width: 992px) {
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+        /* background: #000; */
+    }
+    
+    #theme-btn{
+        top: 2.5rem;
+        right: 2.5rem;
+    }
+
+    .profile{
+        padding-top: 4rem;
+    }
+
+    .profile-data .imgBx{
+        width: 135px;
+        height: 135px;
+        margin-bottom: 1rem;
+    }
+    
+    .profile-data .imgBx img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-data .profession {
+        margin-bottom: 1.5rem;
+    }
+    
+    .profile-info{
+        column-gap: 3rem;
+    }
+
+    .profile-btns{
+        column-gap: 2rem;
+    }
+
+    .projects{
+        gap: 2rem 3rem;
+    }
+
+    .projects-modal{
+        padding: 1.5rem;
+    }
+
+    .skills-group .title{
+        margin-bottom: 2.5rem;
+    }
+
+    .footer-copy{
+        margin: 4.5rem 0 2.5rem;
+    }
+}

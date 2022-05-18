@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Primary Colors */
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+
+  /* Neutral Color */
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+  /* Gradient */
+  --Gradient-one: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --Gradient-two: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  --Gradient-two-hover: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 85%, 70%));
+}
+
+/* General Styles */
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  z-index: 5;
+  max-width: 92rem;
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* End of General Styles */
+
+/* Main Styles */
+
+.landing-pages .container.grid-2 {
+  grid-template-columns: 3.5fr 2.5fr;
+  text-align: left;
+}
+
+.landing-pages .container {
+  background: url(./images/bg-pattern-desktop.svg);
+}
+
+.column-1 {
+  position: relative;
+  left: 9rem;
+}
+
+.column-1 .logo {
+  position: relative;
+  top: -5.5rem;
+  width: 10rem;
+}
+
+.column-1 .text {
+  position: relative;
+  top: 1rem;
+}
+
+.column-1 .text .title {
+  font-weight: 300;
+  color: var(--Desaturated-Red);
+
+  margin-bottom: 0.5rem;
+}
+
+.column-1 .text h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+  font-size: 4rem;
+  color: var(--Dark-Grayish-Red);
+
+  inline-size: 22rem;
+  overflow-wrap: break-word;
+}
+
+.column-1 .text p {
+  inline-size: 27rem;
+  overflow-wrap: break-word;
+  line-height: 1.6;
+  color: var(--Desaturated-Red);
+
+  margin: 2.5rem 0;
+}
+
+/* Email Button */
+
+.email-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  position: relative;
+  left: -11.5rem
+}
+
+label {
+  position: relative;
+}
+
+input {
+  width: 24rem;
+  height: 3rem;
+  padding: 0 1rem;
+
+  border: 1px solid var(--Desaturated-Red);
+  border-radius: 2rem;
+}
+
+input[type="text"] {
+    font-size:18px;
+    color: var(--Dark-Grayish-Red);
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 14px;
+  color: var(--Desaturated-Red);
+  position: relative;
+  left: 1rem;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--Gradient-two);
+
+  border: none;
+  border-radius: 2rem;
+  padding: 0 2.5rem;
+
+  cursor: pointer;
+}
+
+button:hover {
+  background-image: var(--Gradient-two-hover);
+}
+
+
+
