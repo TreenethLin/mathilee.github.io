@@ -1,11 +1,17 @@
 .SearchResults {
     width: 50%;
-    height: 950px;
+    height: 500px;
     overflow-y: scroll;
     padding: .88rem;
     background-color: rgba(1, 12, 63, 0.7);
-    box-shadow: 0 4px 2px 2px #000000;
-  }
+  }  
+
+.SearchResults h2 {
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0.8rem 0;
+}
   
   ::-webkit-scrollbar {
       width: 0px;

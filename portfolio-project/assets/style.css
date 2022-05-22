@@ -282,6 +282,7 @@ img{
 }
 
 .skill .name{
+    text-align: center;
     font-size: medium;
     font-weight: 500;
     line-height: 18px;
@@ -289,6 +290,11 @@ img{
 
 .skill .level{
     font-size: small;
+}
+
+.skill img {
+    width: 4rem;
+    margin-top: 1rem;
 }
 
 /* ===== Show & Hide Filter Content ===== */
