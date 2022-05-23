@@ -5,12 +5,14 @@ import Playlist from "../Playlist/Playlist"
 import { useEffect, useState } from 'react'
 import Spotify from '../../util/Spotify'
 
+import logo from "./logo.png"
+
 function App() {
     const [searchResults, setSearchResults] = useState([])
 
     const [playlistTracks, setPlaylistTracks] = useState([])
 
-    const [playlistName, setPlaylistName] = useState("My Playlist")
+    const [playlistName, setPlaylistName] = useState("New Playlist")
 
     useEffect(() => {
       Spotify.getAccessToken();
@@ -18,18 +20,18 @@ function App() {
     
     // Search
     async function searchSpotify(searchTerms) {
-      const results = await Spotify.search(searchTerms);
-      setSearchResults(results);
+      const results = await Spotify.search(searchTerms)
+      setSearchResults(results)
     }
 
     // Add tracks to playlist
     function addTrack(track) {
       setPlaylistTracks(oldPlaylistTracks => {
         if (oldPlaylistTracks.includes(track)) {
-          return oldPlaylistTracks;
+          return oldPlaylistTracks
         }
         else {
-          return [...oldPlaylistTracks, track];
+          return [...oldPlaylistTracks, track]
         }
       });
     }
@@ -46,17 +48,16 @@ function App() {
 
     // Save playlist
     function savePlaylist() {
-      const trackURIs = playlistTracks.map(track => track.uri);
+      const trackURIs = playlistTracks.map(track => track.uri)
       // iterates through the playlists array and returns a new array that consists of the track uri
-      Spotify.savePlayList(playlistName, trackURIs);
-      setPlaylistName('New Playlist');
+      Spotify.savePlayList(playlistName, trackURIs)
       setPlaylistTracks([]);
     }
 
   return (
     <div>
       <div className='logo'>
-        <h1>Ja<span className="highlight">mmm</span>ing</h1>
+        <h1><img src={logo} alt="logo"/></h1>
       </div>
       <div className="App">
         <SearchBar onSearch={searchSpotify} />

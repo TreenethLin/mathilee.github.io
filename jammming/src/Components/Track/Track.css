@@ -1,5 +1,6 @@
 .Track {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(256, 256, 256, 0.8);
   }
@@ -25,6 +26,9 @@
     flex-direction: column;
     justify-content: center;
     height: 72px;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   
   .Track-information h3 {
@@ -36,4 +40,13 @@
     font-size: .83rem;
     font-weight: 400;
     color: rgba(256, 256, 256, 0.8);
+  }
+
+  .trackinfo img {
+    width: 4.5rem;
+  }
+
+  .trackinfo {
+    display: flex;
+    flex-direction: row;
   }

@@ -3,10 +3,10 @@
     flex-direction: column;
     align-items: center;
     overflow-y: scroll;
-    width: 37%;
-    max-height: 500px;
-    padding: 1rem 1.16rem;
-    background-color: rgba(1, 12, 63, 0.7);
+    width: 45%;
+    height: 500px;
+    padding: .88rem;
+    background-color: rgba(4,9,7,.7);
   }
   
   .Playlist input {
@@ -25,6 +25,7 @@
 
   .Playlist input::placeholder {
     font-weight: 600;
+    color:#989595;
   }
   
   .Playlist-save {
@@ -34,7 +35,7 @@
     border-radius: 54px;
     border-width: 0px;
     margin-top: 1.27rem;
-    background-color: #6c41ec;
+    background-color: #c36729;
     text-align: center;
     font-size: 1rem;
     transition: background-color .25s;
@@ -43,7 +44,7 @@
   }
   
   .Playlist-save:hover {
-    background-color: rgba(108, 65, 233, .7);
+    background-color: rgb(230, 102, 17);
   }
   
   ::-webkit-scrollbar {
