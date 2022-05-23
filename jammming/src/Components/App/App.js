@@ -15,7 +15,7 @@ function App() {
     const [playlistName, setPlaylistName] = useState("New Playlist")
 
     useEffect(() => {
-      Spotify.getAccessToken();
+      Spotify.getAccessToken()
     }, [])
     
     // Search
@@ -38,7 +38,7 @@ function App() {
 
     // Remove tracks from playlist
     function removeTrack(track) {
-      setPlaylistTracks(playlistTracks.filter((currentTrack)=> currentTrack.id !== track.id));
+      setPlaylistTracks(playlistTracks.filter((currentTrack)=> currentTrack.id !== track.id))
     }
 
     // Update playlistname
@@ -51,7 +51,7 @@ function App() {
       const trackURIs = playlistTracks.map(track => track.uri)
       // iterates through the playlists array and returns a new array that consists of the track uri
       Spotify.savePlayList(playlistName, trackURIs)
-      setPlaylistTracks([]);
+      setPlaylistTracks([])
     }
 
   return (
