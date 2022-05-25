@@ -46,7 +46,6 @@ video {
 .container {
     position: relative;
     z-index: 5;
-    max-width: 92rem;
     padding: 0 4rem;
     margin: 0 auto;
 }
@@ -80,17 +79,23 @@ video {
 }
 
 .btn {
-    padding: 0.85rem 9rem;
+    padding: 0.85rem 5rem;
     color: var(--light);
     background-color: var(--dark);
     font-size: 1.1rem;
     font-weight: 500;
     text-transform: uppercase;
     transition: 0.3s;
+    text-align: center;
 }
 
 .btn:hover {
     background-color: var(--black);
+}
+
+.title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
 }
 
 /* End of General Style */
@@ -122,6 +127,7 @@ nav .container {
 .logo {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .logo img {
@@ -182,13 +188,13 @@ nav .container {
 /* Section 2 : Information */
 
 .info-header .info-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 1rem 0;
 }
 
 .info-header .text {
-    padding-right: 3.5rem;
     margin-bottom: 2rem;
+    overflow-wrap: break-word;
 }
 
 .info-header .text-label {
@@ -202,34 +208,36 @@ nav .container {
 
 .info-card {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 2.5rem;
 }
 
 .info-card .card-title {
+    font-size: 1rem;
     text-transform: uppercase;
 }
 
 .info-card .text {
     padding: 0.75rem 0 2rem 0;
-    inline-size: 18rem;
+    inline-size: 10rem;
     overflow-wrap: break-word;
 }
 
 .info-card img {
     position: relative;
     top: 0.5rem;
-    width: 9rem;
+    width: 6rem;
     margin-right: 2rem;
 }
 
 .info-card .btn {
-    padding-right: 2.5rem;
-    padding-left: 2.5rem;
+    font-size: 1rem;
+    padding-right: 0.75rem;
+    padding-left: 0.5rem;
 }
 
 .info-content .container.grid-2 {
-    grid-template-columns: 3.5fr 2.5fr;
+    grid-template-columns: 4fr 2fr;
     padding: 2rem 1.5rem;
     text-align: left;
 }
@@ -245,12 +253,11 @@ nav .container {
 
 .section-header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin: 3rem 0;
 }
 
-.title {
-    font-size: 2.5rem;
-    text-transform: uppercase;
+h1.title {
+    text-align: center;
 }
 
 .cards {
@@ -261,8 +268,8 @@ nav .container {
 .card-wrap {
     display: flex;
     flex-wrap: wrap;
-
-    margin-left: 1rem;
+    justify-content: space-around;
+    margin-left: 2rem;
 }
 
 .card {
@@ -271,16 +278,19 @@ nav .container {
     flex-direction: column;
 
     background-color: var(--light);
-    margin: 0 1rem 2rem 0;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
 }
 
 .card img {
-    width: 23rem;
+    width: 22rem;
 }
 
 .card .card-title {
+    font-size: 1.25rem;
     text-transform: uppercase;
     margin: 1rem 0;
+    padding-right: 3rem;
 }
 
 .card .text {
@@ -310,13 +320,14 @@ nav .container {
     text-align: left;
 }
 
-.video-element {
-    width: 43.5rem;
-}
-
 .exhibit-content .column-2 {
     position: relative;
     top: -7.3rem;
+}
+
+.exhibit-content .container.grid-2 .column-2 .card-title {
+    inline-size: 8rem;
+    overflow-wrap: break-word;
 }
 
 /* Footer */
@@ -329,7 +340,67 @@ nav .container {
     margin: 2rem 0;
 }
 
+/* ========================= Responsive ===================== */
+/* for small devices */
 
+@media screen and (max-width: 420px) {
+    .card-wrap {
+    margin-left: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    
+    .container.grid-2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container.grid-2 .column-1 {
+        margin-left: 1rem;
+    }
+
+    .container.grid-2 .column-2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 4rem;
+        margin-left: 0;
+    }
+
+    .exhibit-content .container.grid-2 .column-2 {
+        margin-top: 10rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .hamburger-menu {
+        z-index: 5;
+    }
+    
+    .links {
+        display: none;
+    }
+
+    nav .container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .header-content .header-title,
+    .header-content .text {
+        margin-left: 1rem;
+    } 
+}
+
+/* Hamburger Menu */
+
+.hamburger-menu {
+    width: 2rem;
+    position: relative;
+    bottom: 4rem;
+    left: 1rem;
+}
 
 
 

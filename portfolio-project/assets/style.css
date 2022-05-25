@@ -22,6 +22,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1,h2,h3{
     color: var(--txt-dark);
 }
@@ -92,6 +96,16 @@ img{
     font-weight: 500;
     color: var(--txt-gray);
     margin-bottom: 1rem;
+}
+
+.profile-data .quote {
+    font-size: small;
+    font-weight: 500;
+    color: var(--txt-gray);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    inline-size: 21rem;
+    overflow-wrap: break-word;
 }
 
 .profile-data .socials{
@@ -204,7 +218,7 @@ img{
 .projects-card{
     position: relative;
     border-radius: 1rem;
-    overflow: hidden;
+    overflow:hidden ;
 }
 
 .projects-card img{
@@ -397,7 +411,8 @@ body.dark-theme{
         grid-template-columns: repeat(2, 332px);
         justify-content: center;
         column-gap: 3rem;
-    } 
+    }
+
 }
 
 /* for Large devices */
