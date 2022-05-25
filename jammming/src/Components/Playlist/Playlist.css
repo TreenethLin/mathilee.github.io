@@ -1,11 +1,12 @@
 .Playlist {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:stretch;
     overflow-y: scroll;
-    width: 45%;
+    width: 37rem;
     height: 500px;
     padding: .88rem;
+    margin: 0 1rem;
     background-color: rgba(4,9,7,.7);
   }
   
@@ -46,13 +47,24 @@
   .Playlist-save:hover {
     background-color: rgb(230, 102, 17);
   }
+
+  .button {
+    display: flex;
+    justify-content: center;
+  }
   
   ::-webkit-scrollbar {
       width: 0px;
       background: transparent;
   }
   
-  @media only screen and (max-width: 1020px) {
+  @media only screen and (max-width: 1200px) {
+    .Playlist {
+      width: 30rem;
+    }
+  }
+
+  @media only screen and (max-width: 650px) {
     .Playlist {
       width: 90%;
     }

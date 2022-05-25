@@ -18,7 +18,9 @@ function Playlist({playlistName, onNameChange, tracks, onRemove, onSave}) {
             handleTrackAction={onRemove}/>
         })}
         </div>
-      <button class="Playlist-save" onClick={onSave}>SAVE TO SPOTIFY</button>
+        <div className="button">
+          <button className="Playlist-save" onClick={onSave}>SAVE TO SPOTIFY</button>
+      </div>
     </div>
   )
 }

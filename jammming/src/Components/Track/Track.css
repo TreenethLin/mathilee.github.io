@@ -50,3 +50,13 @@
     display: flex;
     flex-direction: row;
   }
+
+  @media only screen and (max-width: 420px) {
+   .Track-information p {
+     font-size: 0.60rem;
+   }
+
+   .Track-information h3 {
+     font-size: 0.75rem;
+   }
+  }
