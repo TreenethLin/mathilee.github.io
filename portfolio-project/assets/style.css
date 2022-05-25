@@ -372,6 +372,14 @@ body.dark-theme{
 
 /* ========================= Responsive ===================== */
 /* for small devices */
+
+@media screen and (max-width: 360px) {
+    h4.quote {
+        position: relative;
+        right: 0.75rem
+    }
+}
+
 @media screen and (max-width: 320px) {
     .container{
         margin-left: 1rem;
