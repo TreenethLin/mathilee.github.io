@@ -85,7 +85,7 @@ video {
 }
 
 .btn:hover {
-    
+    background-color: #000000;
 }
 
 .title {
@@ -154,8 +154,7 @@ nav .container {
 }
 
 .links a:hover {
-    color: var(--black);
-    font-weight: 500;
+    color: var(--grey)
 }
 
 /* End of Navigation Bar */
