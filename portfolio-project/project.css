@@ -11,7 +11,6 @@
     --black: #000000 ;
     --dark : #333;
     --grey: #aeaeae;
-    --bluesky: #46a7c7;
     --light: #fff;
 
 }
@@ -33,6 +32,11 @@ li {
 
 a {
     text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    color:var(--dark);
 }
 
 img {
@@ -55,6 +59,11 @@ video {
     grid-template-columns: repeat(2 1fr);
     align-items: center;
     justify-content: center;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(2 1fr);
 }
 
 .column-1 {
@@ -97,12 +106,7 @@ video {
 
 
 /* Navigation Bar */
-header {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
 
-}
 nav {
     width: 100%;
     position: relative;
@@ -118,20 +122,6 @@ nav .container {
     background-color: var(--light);
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo img {
-    width: 2.5rem;
-}
-
-.logo span {
-    color: var(--grey);
-}
-
 .container.links {
     justify-content: center;
     align-items: center;
@@ -140,6 +130,11 @@ nav .container {
 .links img {
     width: 12rem;
     margin: 0 0.5rem;
+    transition: 0.5s;
+}
+
+.links img:hover {
+    width: 13rem;
 }
 
 .links a {
@@ -164,11 +159,6 @@ nav .container {
     text-align: left;
 }
 
-.header-title {
-    font-size: 3rem;
-    line-height: 1;
-}
-
 .header-content .text {
     margin: 1.5rem 0 3rem 0;
     padding-right: 4.5rem;
@@ -178,10 +168,12 @@ nav .container {
 
 .header-content .column-1 {
     text-transform: uppercase;
+    align-items: center;
 }
 
 .column-2 img {
     width: 5rem;
+    transition: 0.5s;
 }
 
 .column-2 p {
@@ -191,6 +183,11 @@ nav .container {
 span {
     margin-right: 0.2rem;
     font-weight: 300;
+}
+
+.column-2.stack .grid-3 {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .screenshot h1 {
@@ -243,13 +240,18 @@ h1.title {
     margin-bottom: 2rem;
 }
 
+.footer-content p {
+    font-size: 0.8rem;
+}
+
 footer {
     position: relative;
     top: 0.5rem;
 }
 
+/* End of Footer */
+
 /* ========================= Responsive ===================== */
-/* for small devices */
 
 @media screen and (max-width: 960px) {
     
@@ -273,6 +275,11 @@ footer {
         margin-left: 0;
     }
 
+    .column-2 .grid-3 {
+        align-items: center;
+        justify-content: center;
+    }
+
     .screenshot .container.grid-2 .column-1 {
         margin-left: 0rem;
     }
@@ -285,4 +292,6 @@ footer {
         margin-bottom: 3rem;
     }
 }
+
+
 
