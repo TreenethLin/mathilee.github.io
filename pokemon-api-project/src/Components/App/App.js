@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className='flex items-center justify-center h-screen bg-gradient-to-br from-rose-200 to-rose-400'>
-      <div className="bg-white text-center rounded-3xl border shadow-lg p-10 max-w-xs ">
+      <div className="bg-white text-center justify-center items-center rounded-3xl border shadow-lg p-10 max-w-xs">
         <Header logo={pokeapi}/>
         <SearchBar handleSubmit={handleSubmit} setName={setName} name={name} data={data} error={error}/>
         <SearchResult error={error} data={data} />
